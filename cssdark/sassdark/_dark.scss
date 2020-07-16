@@ -1,0 +1,72 @@
+$fuente-madre: 'Chakra Petch', sans-serif;
+
+/*night theme*/
+
+$color-body-n: #110038;
+$btn-dark: #EE3EFE;
+$box-shadow-dark: #A72CB3;
+$gradient-dark: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+$border: #110038;
+$border-text: #2E32FB;
+
+/*elementos*/
+$grey-dark: #B4B4B4;
+$inner-s-dark: #8F8F8F;
+$shadow-boxcont: #5C5C5C;
+
+
+.sug-element-style{
+    position: relative;
+    width: 300px;
+    height: 325px;
+    background: $grey-dark;
+    box-shadow: inset -2px -2px 0 0 $shadow-boxcont, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.sug-element-title{
+    height: 25px;
+    margin: 0 3px;
+    position: relative;
+    top: 2px;
+    background:$gradient-dark;
+    font-size: 14px;
+    overflow: hidden;
+    color: #ffffff;
+    padding: 4px 0;
+    overflow: hidden;
+}
+
+
+
+.sug-element-img{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
+    padding: 3px;
+    
+}
+
+.sug-close{
+    width: 16px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.btn-vermas{
+    position: absolute;
+    background: #2E32FB;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+    
+    color: #FFFFFF;
+    z-index: 2;
+    padding: 10px 15px;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 15px 10px;
+    cursor: pointer;
+}

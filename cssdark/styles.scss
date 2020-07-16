@@ -1,0 +1,456 @@
+$fuente-madre: 'Chakra Petch', sans-serif;
+
+/*night theme*/
+
+$color-body-n: #110038;
+$btn-dark: #EE3EFE;
+$box-shadow-dark: #A72CB3;
+$gradient-dark: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+$border: #110038;
+$border-text: #2E32FB;
+
+/*elementos*/
+$grey-dark: #B4B4B4;
+$inner-s-dark: #8F8F8F;
+
+
+
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: $fuente-madre;
+    transition: all 0.2s;
+}
+
+body{
+    background-color: $color-body-n;
+}
+
+/*-------ENCABEZADO/HEADER--------*/
+
+.inicio-gifos{
+    width: 100%;
+    position: relative;
+    background-image: $gradient-dark;
+    box-shadow: $border;
+
+    h3{
+        font-family: $fuente-madre;
+        font-weight: lighter;
+        font-size: 12px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        padding: 4px 0;
+        margin-left: 8px;
+    }
+    
+}
+
+
+.encabezado-gifos{
+    width: 100%;
+    position: relative;
+}
+
+.elements-encabezados{
+    margin-top: 44px;
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.img{
+    margin-left: 91px;
+    padding: 12px 0;
+    img{
+        width: 102px;
+    }
+}
+
+.btns{
+    margin-right: 140.5px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+
+    .btn-relleno{
+        position: absolute;
+        right: 413px;
+        padding: 11px 26.5px;
+        background-color: $btn-dark;
+        color: #FFFFFF;
+        text-decoration: none;
+        border: 1px solid $border;
+        box-shadow: inset -1px -1px 0 0 $box-shadow-dark, inset 1px 1px 0 0;
+        margin: 0 8.25px;
+        line-height: 18px;
+
+        &:hover{
+            //border: 1px dotted #110038;
+            
+            background: #CE36DB;
+            border: 1px solid #110038;
+            box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+
+            &::after{
+                content: "";
+                top: 1px;
+                right: 3px;
+                position: absolute;
+                border: 1px dotted #110038;
+                padding: 17px 68px;
+            }
+
+        }
+    }
+    .group-grid{
+        position: relative;
+        right: 75px;
+        display: grid;
+        grid-template-columns: 151.5px 47px;
+        text-decoration: none;
+        color: #FFFFFF;
+        cursor: pointer;
+
+
+        .btn-relleno2{
+            padding: 11px 26.5px;
+            background-color: $btn-dark;
+            border: 1px solid $border;
+            box-shadow: inset -1px -1px 0 0 $box-shadow-dark, inset 1px 1px 0 0;
+            margin: 0 0 0 8.25px;
+            line-height: 18px;
+
+            &:hover{
+                //border: 1px dotted #110038;
+                
+                background: #CE36DB;
+                border: 1px solid #110038;
+                box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+    
+                &::after{
+                    content: "";
+                    top: 2px;
+                    right: 54px;
+                    position: absolute;
+                    border: 1px dotted #110038;
+                    padding: 17px 65px;
+                }
+    
+            }
+            
+        }
+    
+        .btn-drop{
+            margin: 0 8.25px 0 -5px;
+            padding: 11px 15px;
+            text-decoration: none;
+            background-color: $btn-dark;
+            border: 1px solid $border;
+            box-shadow: inset -1px -1px 0 0 $box-shadow-dark, inset 1px 1px 0 0;
+            line-height: 18px;
+
+            &:hover{
+                //border: 1px dotted #110038;
+                
+                background: #CE36DB;
+                border: 1px solid #110038;
+                box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+    
+                &::after{
+                    content: "";
+                    top: 2px;
+                    right: 12px;
+                    position: absolute;
+                    border: 1px dotted #110038;
+                    padding: 17px 17px;
+                }
+    
+            }
+            
+        }
+    }
+
+
+
+    /*check*/
+    
+    .dd-input {
+        display: none;
+      }
+      
+      .dd-menu {
+        position: absolute;
+        right: 75px;
+        top: 100%;
+        padding: 0;
+        margin: 0 8px;
+        background: $grey-dark;
+        box-shadow: inset -2px -2px 0 0 $inner-s-dark, inset 2px 2px 0 0 #FFFFFF;
+        list-style-type: none;
+      }
+      
+      .dd-input + .dd-menu {
+        display: none;
+      } 
+      
+      .dd-input:checked + .dd-menu {
+        display: block;
+        position: relative;
+        top: 0;
+      } 
+      
+      .dd-menu {
+        padding: 1px;
+        
+        white-space: nowrap;
+        li {
+            cursor: pointer;
+            margin: 8px;
+            padding: 11px 26.5px;
+            background: #CCCCCC;
+            border: 1px solid #808080;
+            box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+
+            &:hover{
+                background: #2E32FB;
+                border: 1px solid rgba(51,53,143,0.20);
+                box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+                color: #FFFFFF;
+            }
+        }
+        
+      }
+
+    /*fin de check*/
+
+    .btn-sin-relleno{
+        position: absolute;
+        right: 131px;
+        padding: 11px 0;
+        text-decoration: none;
+        margin: 0 8.25px;
+        color: #FFFFFF;
+        
+        &::before {
+            content: "_";
+            position: absolute;
+            bottom: 8px;
+            margin-left: 1px;
+        }
+    }
+
+}
+
+
+/*-----ESTILOS DEL BUSCADOR-----*/
+
+.buscador{
+    position: relative;
+    width: 100%;
+    top: 25px;
+
+    .cont-browser{
+        position: relative;
+        margin: 0 140px 0 91px;
+        background: $grey-dark;
+        box-shadow: inset -2px -2px 0 0 $inner-s-dark, inset 2px 2px 0 0 #FFFFFF;
+
+        
+        
+        .buscar-tit{
+            position: relative;
+            top: 2px;
+            margin: 0 3px;
+            background-image: $gradient-dark;
+
+            h3{
+                font-family: $fuente-madre;
+                font-weight: lighter;
+                font-size: 12px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                padding: 4px 0;
+                margin-left: 8px;
+            }
+        }
+
+
+        .buscador-text{
+            width: 100%;
+            max-width: 1130px;
+           padding-left: 16px;
+           font-size: 16px;
+           color: #B4B4B4;
+            height: 42px;
+            background: #FFFFFF;
+            border: 1px solid #979797;
+            box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+            margin: 12px 0 12px 15px;
+        }
+
+        .btn-search{
+            display: flex;
+            background: $grey-dark;
+            border: 1px solid $inner-s-dark;
+            box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+            cursor: pointer;
+            padding: 7px 15px;
+            float: right;
+            margin: 16px 15px 16px 15px;
+            
+
+            p{
+                font-family: $fuente-madre;
+                font-size: 16px;
+                color: #8F8F8F;
+                letter-spacing: 0;
+                line-height: 18px;
+                margin-left: 5px;
+            }
+
+            svg{
+                width: 16px;
+
+                g{
+                    fill:#8F8F8F;
+                }
+
+                g .act-lupa{
+                    fill: $color-body-n;
+                }
+                
+            }
+
+            
+        }
+        .btn-dos{
+            display: flex;
+            background: #F7C9F3;
+            border: 1px solid #808080;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+            cursor: pointer;
+            padding: 7px 15px;
+            float: right;
+            margin: 16px 15px 16px 0;
+            
+
+            p{
+                font-family: $fuente-madre;
+                font-size: 16px;
+                color: #110038;
+                letter-spacing: 0;
+                line-height: 18px;
+                margin-left: 5px;
+            }
+
+            img{
+                width: 16px;
+            }
+        }
+    }
+}
+
+.sugerencias{
+    position: relative;
+    top: 71px;
+    width: 100%;
+
+    .cont-sugerencias{
+        margin: 0 140px 0 91px;
+        position: relative;
+
+        .text-sugerencias{
+            width: 100%;
+            height: 32px;
+            padding: 6px 0 6px 6px;
+            background: #FFFAFE;
+            border: 1px solid $border-text;
+            box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 $color-body-n;
+
+            h3{
+            font-family: $fuente-madre;
+            font-weight: lighter;
+            font-size: 14px;
+            color: $color-body-n;
+            letter-spacing: 0;
+            }
+            
+        }
+    }
+}
+
+.cont-gif{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+    top: 25px;
+    
+
+    .subcont{
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+    }
+}
+
+
+.tendencias{
+    position: relative;
+    top: 71px;
+    width: 100%;
+    margin-top: 64px;
+
+    .cont-sugerencias{
+        margin: 0 140px 0 91px;
+        position: relative;
+
+        .text-sugerencias{
+            width: 100%;
+            height: 32px;
+            padding: 6px 0 6px 6px;
+            background: #FFFAFE;
+            border: 1px solid $border-text;
+            box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 $color-body-n;
+
+            h3{
+            font-family: $fuente-madre;
+            font-weight: lighter;
+            font-size: 14px;
+            color: $color-body-n;
+            letter-spacing: 0;
+            }
+            
+        }
+    }
+}
+
+
+.sec-resultados{
+    position: relative;
+    top: 100px;
+    margin: 0 140px 0 91px;
+    width: calc(200px*6+3em);
+    //justify-content: center;
+}
+
+.result{
+    
+    columns: 6;
+    column-gap: 1em;
+}
+
+.img-item{
+    cursor: pointer;
+    
+    //overflow: hidden;
+}
+
+@import "sassdark/_dark.scss";

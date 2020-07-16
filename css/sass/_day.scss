@@ -1,0 +1,117 @@
+/*--SUGERENCIAS--*/
+
+.sug-element-style{
+    position: relative;
+    width: 300px;
+    height: 325px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.sug-element-title{
+    height: 25px;
+    margin: 0 3px;
+    position: relative;
+    top: 2px;
+    background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    font-size: 14px;
+    overflow: hidden;
+    color: #ffffff;
+    padding: 4px 0;
+    overflow: hidden;
+}
+
+
+
+.sug-element-img{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
+    padding: 3px;
+    
+}
+
+.sug-close{
+    width: 16px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.btn-vermas{
+    position: absolute;
+    background: #4180F6;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+    color: #FFFFFF;
+    z-index: 2;
+    padding: 10px 15px;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 15px 10px;
+    cursor: pointer;
+}
+
+
+
+/*TENDENCIAS Y BUSQUEDA*/
+
+
+.cont-gif-tend{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+    top: 25px;
+    
+
+    .subcont{
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+    }
+}
+
+.trend-element-style{
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.trend-element-style-hv{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.trend-element-title{
+    height: 25px;
+    margin: 0 3px;
+    position: relative;
+    top: 272px;
+    z-index: 1;
+    background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    font-size: 14px;
+    overflow: hidden;
+    color: #ffffff;
+    padding: 4px 0;
+    overflow: hidden;
+}
+
+
+
+.trend-element-img{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
+    padding: 3px;
+    
+}
