@@ -1,6 +1,4 @@
 
-/*---------Cambiando de tema--------*/
-/*---------DOM--------*/
 
 let liDay = document.getElementById("s-day");
 let liNight = document.getElementById("s-night")
@@ -11,7 +9,7 @@ let logoDark = document.getElementById("logodark")
 logoDark.style.display="none";
 let dropDay = document.getElementById("dd-day");
 let dropDark = document.getElementById("dd-dark");
-dropDark.hidden="none";
+dropDark.style.display="none";
 dropDark.style.marginTop="7px";
 
 
@@ -66,40 +64,74 @@ liDay.addEventListener("click", ()=>{
 })
 
 
-/*---------BOTON DE SEARCH--------*/
+let btnMisGifos = document.getElementById("btn-night-a")
 
 
-let texto = document.getElementById("input-type")
-let botonBuscar = document.getElementById("btn-busca")
-let Lupa = document.getElementById("g-id")
+btnMisGifos.style.color = "grey"
 
 
-getID=(id)=>{
-    return document.getElementById(id).value;
-}
+const GIPHY_API_URL = 'https://api.giphy.com/v1/gifs/';
+const GIPHY_API_USERNAME = "glowupdesign";
+const GIPHY_API_KEY = "qAYj5sLDr6gXtwQv3AHcTtazy8ldSC8k";
+const GIPHY_UPLOAD_URL = "https://upload.giphy.com/v1/gifs";
 
-innderHTML=(id, result)=>{
-    return document.getElementById(id).innerHTML=result;
-}
 
-texto.addEventListener("keypress", ()=>{
-        setInterval(function(){
-            var c = getID("input-type")
+
+
+getGifById = (id) =>{
     
-            if(c.length>0){
-                botonBuscar.classList.replace("btn-search","btn-dos")
-                
-                Lupa.classList.replace("act-lupa","in-lupa");
-                
+    let misgifosCreados = document.getElementById("misgifosCreados")
+    const urlById = GIPHY_API_URL + id +"?api_key="+GIPHY_API_KEY
+    //console.log(id)
+    //const urlById = `${GIPHY_API_URL}${id}?api_key=${GIPHY_API_KEY}`
 
-                //let padreUno = lupaIn.parentNode;
-                //padreUno.replaceChild(lupaAct,lupaIn)
-            }else{
-                botonBuscar.classList.replace("btn-dos","btn-search")
-                //let padreDos = lupaAct.parentNode;
-                //padreDos.replaceChild(lupaIn,lupaAct);
-            }
-        },0000);
-})
+    console.log(urlById)
+    
+    fetch(urlById)
+        .then((res)=>{
+        console.log(res)
+        return res.json()
+        
+        })
+        .then((resJson) => {
+        let data = resJson.data
+        //console.log(data)
+        let contDiv = document.createElement("div")
+        let contImg = document.createElement("img")
+
+        contDiv.classList.add("divMisgifos")
+        contImg.src = data.images.fixed_width.url
+        contImg.classList.add("imgMisGifs")
+
+        misgifosCreados.appendChild(contDiv)
+        contDiv.appendChild(contImg)
+    })
+    .catch((e)=>{
+        console.log("Error en el getGifById" + e)
+    })
+}
+
+getGifsById = (gifsId) => {
+      console.log(gifsId)
+    for(let id of gifsId){
+        getGifById(id)
+    }   
+}
+
+
+const validarGifsId = () => {
+    if (localStorage.getItem('myGifs') !== null) {
+        let idDeGif = JSON.parse(localStorage.myGifs);
+        if (idDeGif.length === 0) {
+            console.log('no hay gifos creados')
+        } else {
+            console.log('hay gifos')
+            getGifsById(idDeGif)
+            //console.log(idDeGif)
+        }
+    }
+}
+
+validarGifsId()
 
 

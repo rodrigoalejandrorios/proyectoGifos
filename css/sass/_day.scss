@@ -2,8 +2,8 @@
 
 .sug-element-style{
     position: relative;
-    width: 300px;
-    height: 325px;
+    width: 287px;
+    height: 300px;
     background: #E6E6E6;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
@@ -26,7 +26,7 @@
 .sug-element-img{
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 275px;
     max-height: 300px;
     padding: 3px;
     
@@ -60,38 +60,110 @@
 /*TENDENCIAS Y BUSQUEDA*/
 
 
+
+
 .cont-gif-tend{
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 20px;
-    justify-content: space-between;
+    grid-template-columns: repeat(4, minmax(283px, auto));
+    grid-gap: 25px;
     width: 100%;
     top: 25px;
-    
-
-    .subcont{
-        width: 300px;
-        height: 300px;
-        border: 1px solid black;
-    }
+    grid-auto-flow: dense;
 }
+
+
 
 .trend-element-style{
+  
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 287px;
+    height: 283px;
 }
+
+.trend-element-style-tres{
+    grid-column: span 2;
+    position: relative;
+    width: 566px;
+    height: 283px;
+}
+
 
 .trend-element-style-hv{
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 283px;
+    height: 283px;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.trend-element-style-hv-tres{
+    position: relative;
+    width: 620px;
+    height: 283px;
     background: #E6E6E6;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
 .trend-element-title{
+    height: 25px;
+    margin: 0 3px;
+    position: relative;
+    top: 255px;
+    z-index: 1;
+    background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    font-size: 14px;
+    overflow: hidden;
+    color: #ffffff;
+    padding: 4px 0;
+    overflow: hidden;
+}
+
+.trend-element-title-tres{
+    grid-column: span 2;
+    height: 25px;
+    width:610px;
+    margin: 0 3px;
+    position: relative;
+    top: 255px;
+    z-index: 1;
+    background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    font-size: 14px;
+    overflow: hidden;
+    color: #ffffff;
+    padding: 4px 0;
+    overflow: hidden;
+}
+
+
+
+
+
+
+.trend-element-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    max-height: 300px;
+    padding: 3px;
+    grid-auto-columns: column dense;
+}
+
+.trend-element-img-tres{
+    grid-auto-columns: column dense;
+    grid-column: span 2;
+    position: absolute;
+    width: 615px;
+    height: 100%;
+    padding: 3px;
+    
+}
+
+/*CSS SEARCH*/
+
+
+.trend-tit-search{
     height: 25px;
     margin: 0 3px;
     position: relative;
@@ -106,12 +178,5 @@
 }
 
 
+//FECHA
 
-.trend-element-img{
-    position: absolute;
-    width: 100%;
-    height: 300px;
-    max-height: 300px;
-    padding: 3px;
-    
-}

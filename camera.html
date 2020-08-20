@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estas listo? Comencemos!</title>
+  <title>Crea tu GIF</title>
+  <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+
 </head>
 <body>
   <head id="idHead">
@@ -26,59 +28,133 @@
               <a href="index.html"><img id="logoday" src="images/gifOF_logo.png" alt=""></a>
               <a href="index.html"><img id="logodark" src="images/gifOF_logo_dark.png" alt=""></a>
             </div>
-            <div class="btns">
-                <a id="btn-night" class="btn-relleno" href="">Crear Guifos</a>
-
-                
-                <label class="dropdown">
-                <div class="group-grid">
-                    <div id="div-btn-colors" class="btn-relleno2"><p>Elegir tema<p></div>
-                    <div id="div-btn-drop" class="btn-drop">
-                        <img id="dd-dark" src="images/forward.svg" alt="">
-                        <img id="dd-day" src="images/dropdown.svg" alt="">
-                    </div>
-                </div>
-
-                <input type="checkbox" class="dd-input" id="test">
-
-                <ul class="dd-menu">
-                    <li id="s-day">Sailor day</li>
-                    <li id="s-night">Sailor Night</li>
-                </ul>
-                </label>
-                
-                <a id="btn-night-a" class="btn-sin-relleno" href="camara.html"> Mis gifos</a>
-            </div>
+            
         </div>
         
     </section>
 
-    <section class="buscador">
+    <section id="cajacamaraInit" class="buscador">
       <div class="contraer">
-        <div class="cont-browser">
-          <div class="buscar-tit">
-            <h3>Crear gifos</h3>
+        <div class="cont-cajacam">
+          <div class="cont-tit-camera">
+            <h3 id="tituloCaja">Un Chequeo Antes de Empezar</h3>
+            <a href="creargif.html"><img src="images/close.svg" alt=""></a>
           </div>
-          <div>
+          <div class="cont-padre-cam">
+            <div class="preview" id="preview">
+
+            </div>
+            <video src="" class="camara" id="camera" autoplay="true">
+              
+            </video>
+            <video src="" class="verVideo" id="recordedGif" autoplay="true">
+              
+            </video>
+            
+            <div id="ventanaCarga">
+              <img class="img-glob" src="images/globe_img.png" alt="">
+              <h2 class="tituloVentana">Estamos subiendo tu guifo…</h2>
+              <div class="loaderGifBox" id="loaderGifBox">
+                
+              </div>
+              <progress class="loaderGif" id="loaderGif" max="100" value="0"></progress>
+              <h4 class="text-par">Tiempo restante: <strike >38 años</strike> algunos minutos</h4>
+            </div>
+          </div>
+
+          
+          <div class="btns-cam" >
+            <div id="pararUpload">
+              
+            </div>
+            <div id="capturarImg">
+              <div class="cont-btn-record">
+                <img class="cameraimg" src="images/camera.svg" alt="">
+                <button class="btn-grabar" id="capturar">
+                Capturar
+                </button>
+              </div>
+              
+            </div>
+            <div class="recordVideoUno" id="recordingImg">
+              <div class="contadorVideo" id="contadorTiempo">
+                
+              </div>
+              <div class="cont-btn-record">
+                <img class="cameraRecord" src="images/recording.svg" alt="">
+            
+                <button class="btn-record"  id="pararGrabacion" >
+                Listo
+                </button>
+                
+              </div>
+              
+            </div>
+          </div>
+          
+          <div  id="controlVideo">
+            <div class="play">
+              <div class="contador" id="contador">
+                
+              </div>
+              <button class="reproducir" id="reproducir">
+                <img src="images/forward.svg" alt="">
+              </button>
+              <div class="reproductor" id="repro">
+                <div class="box-rep-false" id="progress">
+                </div>
+              </div>
+              <div id="groupBtn" class="btnCam-group">
+                <button href="" class="btn-cancel" id="btn-cancel"><a href="camera.html">Repetir Captura</a> </button>
+                <button class="btn-upload" id="uploadBtn">Subir Gif</button>
+                
+              </div>
+              
+              
+            </div>
             
           </div>
-          <div class="btn-start">
-            <a href="creargif.html">
-                <button class="cancel-btn">
-                  Cancelar
-                </button>
-              </a>
-              <a href="camera.html">
-                <button class="start-btn">
-                  Comenzar
-                </button>
-              </a>
-          </div>
+          
         </div>
       </div>
       
     </section>
 
-    <script src="js/theme.js"></script>
+    <!--CAJA DE DESCARGA (FINAL) -->
+
+    <section id="box-download">
+      <div class="cont-cajafinal">
+        <div class="cont-tit-camera">
+          <h3 id="tituloCaja">Gifo Subido con Éxito</h3>
+          <a href="creargif.html"><img src="images/close.svg" alt=""></a>
+        </div>
+        <div class="cont-derecha-dow">
+          <h3 class="titulo-dowbox">Guifo creado con éxito</h3>
+          <button class="btn-boxdow" id="copiar" href="">Copiar Enlace Guifo</button>
+          <button class="btn-boxdow"><a id="descarga-btn" href="" download="">Descargar Guifo</a></button>
+        </div>
+        <a class="btn-listo" href="index.html">Listo</a>
+        <div class="gifCreadoEstilo" id="gifcreado">
+
+        </div>
+       
+        
+      </div>
+    </section>
+
+
+    <section>
+      <div id="div-btncam" class="column-btn">
+        <button class="btn-grabar" id="desactiveCam">
+          Desactivar Camara
+        </button>
+        <button class="btn-grabar" id="activeCam">
+          Activar Camara
+        </button>
+        
+      </div>
+    </section>
+    <script src="js/camera.js"></script>
+    
 </body>
 </html>
